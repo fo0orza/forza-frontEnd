@@ -1,7 +1,10 @@
+import HeroSection from "@/components/shared/hero/hero-section";
 
 
 export default function HomePage() {
     return (
-        <h1>Welcome to Forza</h1>
+        <div>
+            <HeroSection />
+        </div>
     )
 }

@@ -93,6 +93,7 @@
     "@types/node": "^22.15.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
+    "@types/three": "^0.184.1",
     "@typescript-eslint/eslint-plugin": "^8.57.1",
     "@vitejs/plugin-react": "^4.7.0",
     "@vitest/ui": "^3.2.4",

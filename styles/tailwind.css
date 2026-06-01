@@ -63,7 +63,7 @@
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: var(--font-sans);
-  --font-instrument-serif: var(--font-instrument-serif);
+  --font-cairo: var(--font-cairo);
   --font-oswald: var(--font-oswald);
   --font-bebas-neue: var(--font-bebas-neue);
   --color-sidebar-ring: var(--sidebar-ring);

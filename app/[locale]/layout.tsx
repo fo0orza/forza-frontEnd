@@ -1,16 +1,17 @@
 import "styles/tailwind.css"
-import { Bebas_Neue, Instrument_Serif, Oswald } from "next/font/google"
+import { Bebas_Neue, Cairo, DM_Sans, Oswald } from "next/font/google"
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils"
 
-const instrumentSerif = Instrument_Serif({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: "400",
-  style: ["italic"],
-  variable: "--font-instrument-serif",
+  variable: "--font-sans",
+  fallback: ["Inter", "system-ui", "sans-serif"],
 })
+
+
 const oswald = Oswald({
   subsets: ["latin"],
   weight: "400",
@@ -20,6 +21,11 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-bebas-neue",
+})
+
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  variable: "--font-cairo",
 })
 
 
@@ -33,7 +39,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   }
 
   return (
-    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("font-sans antialiased", instrumentSerif.variable, oswald.variable, bebasNeue.variable)}>
+    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("antialiased", locale === 'ar' ? 'font-cairo' : 'font-sans', dmSans.variable, oswald.variable, bebasNeue.variable, cairo.variable)}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider>
           {children}

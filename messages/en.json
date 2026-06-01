@@ -1,5 +1,61 @@
 {
   "HomePage": {
     "title": "Mercato"
+  },
+  "Hero": {
+    "badge": "The #1 Platform for Fitness Coaches",
+    "heading": {
+      "line1": "Coach Smarter.",
+      "line2": "Scale Faster."
+    },
+    "subtitle": "The all-in-one platform built for elite fitness coaches to manage clients, deliver plans, and grow revenue.",
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "See how it works"
+    }
+  },
+  "Dashboard": {
+    "topBar": {
+      "time": "Today · 9:41"
+    },
+    "sidebar": {
+      "workspace": "Workspace",
+      "nav": {
+        "dashboard": "Dashboard",
+        "clients": "Clients",
+        "programs": "Programs",
+        "nutrition": "Nutrition",
+        "messages": "Messages"
+      }
+    },
+    "clientList": {
+      "title": "Active Clients",
+      "total": "24 total"
+    },
+    "clientPlans": {
+      "hypertrophy": "Hypertrophy",
+      "cut": "Cut",
+      "strength": "Strength",
+      "recomp": "Recomp",
+      "week": "Week {n}"
+    },
+    "progressChart": {
+      "label": "Avg Progress",
+      "value": "+12.4%",
+      "vsLastWeek": "↑ vs last week"
+    },
+    "nutrition": {
+      "title": "Nutrition Plan",
+      "kcal": "2,450 kcal",
+      "macros": {
+        "protein": "Protein",
+        "carbs": "Carbs",
+        "fats": "Fats"
+      }
+    },
+    "miniStats": {
+      "active": "Active",
+      "retention": "Retention"
+    }
   }
 }

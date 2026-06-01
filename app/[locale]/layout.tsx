@@ -1,18 +1,35 @@
 import "styles/tailwind.css"
-import { Figtree, Instrument_Serif } from "next/font/google"
+import { Bebas_Neue, Cairo, DM_Sans, Oswald } from "next/font/google"
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils"
 
-const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" })
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  fallback: ["Inter", "system-ui", "sans-serif"],
+})
 
-const instrumentSerif = Instrument_Serif({
+
+const oswald = Oswald({
   subsets: ["latin"],
   weight: "400",
-  style: ["italic"],
-  variable: "--font-instrument-serif",
+  variable: "--font-oswald",
 })
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas-neue",
+})
+
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  variable: "--font-cairo",
+})
+
+
+
 
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }>; }) {
@@ -22,7 +39,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   }
 
   return (
-    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("font-sans antialiased", figtree.variable, instrumentSerif.variable)}>
+    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("antialiased", locale === 'ar' ? 'font-cairo' : 'font-sans', dmSans.variable, oswald.variable, bebasNeue.variable, cairo.variable)}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider>
           {children}

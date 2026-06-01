@@ -1,11 +1,9 @@
 import "styles/tailwind.css"
-import { Figtree, Instrument_Serif } from "next/font/google"
+import { Bebas_Neue, Instrument_Serif, Oswald } from "next/font/google"
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils"
-
-const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" })
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -13,6 +11,19 @@ const instrumentSerif = Instrument_Serif({
   style: ["italic"],
   variable: "--font-instrument-serif",
 })
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-oswald",
+})
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas-neue",
+})
+
+
+
 
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }>; }) {
@@ -22,7 +33,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   }
 
   return (
-    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("font-sans antialiased", figtree.variable, instrumentSerif.variable)}>
+    <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("font-sans antialiased", instrumentSerif.variable, oswald.variable, bebasNeue.variable)}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider>
           {children}

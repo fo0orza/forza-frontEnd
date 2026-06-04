@@ -1,5 +1,5 @@
-import HeroBackground from "@/components/shared/hero/hero-background"
-import HeroContent from "@/components/shared/hero/hero-content"
+import HeroBackground from "@/widgets/hero/hero-background"
+import HeroContent from "@/widgets/hero/hero-content"
 
 const HeroSection = () => {
     return (

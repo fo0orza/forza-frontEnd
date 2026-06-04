@@ -1,4 +1,4 @@
-import HeroSection from "@/components/shared/hero/hero-section";
+import HeroSection from "@/widgets/hero";
 
 
 export default function HomePage() {

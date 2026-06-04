@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server"
-import LanguageSwitcher from "@/components/shared/language/language-switcher";
+import LanguageSwitcher from "@/features/language/language-switcher";
 import { NAV_LINKS } from "@/constants";
 import { Link } from "@/i18n/navigation"
 

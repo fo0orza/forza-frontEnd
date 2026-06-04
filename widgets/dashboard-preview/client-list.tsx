@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import ClientCard from "@/components/shared/dashboard/client-card"
 import { CLIENTS } from "@/constants"
+import ClientCard from "@/widgets/dashboard-preview/client-card"
 
 
 const ClientList = async () => {

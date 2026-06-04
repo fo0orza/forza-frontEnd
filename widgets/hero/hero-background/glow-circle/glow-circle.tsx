@@ -1,5 +1,5 @@
 import grain from "@/assets/imgs/grain.jpg"
-import CircleFade from "@/components/shared/hero/hero-background/glow-circle/circle-fade"
+import CircleFade from "@/widgets/hero/hero-background/glow-circle/circle-fade"
 
 const GlowCircle = () => {
     return (

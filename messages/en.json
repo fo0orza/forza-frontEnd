@@ -57,5 +57,13 @@
       "active": "Active",
       "retention": "Retention"
     }
+  },
+  "Navbar": {
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "coaches": "Coaches",
+      "login": "Login"
+    }
   }
 }

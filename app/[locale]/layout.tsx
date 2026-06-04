@@ -2,6 +2,7 @@ import "styles/tailwind.css"
 import { Bebas_Neue, Cairo, DM_Sans, Oswald } from "next/font/google"
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import Navbar from "@/components/shared/navbar";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils"
 
@@ -42,6 +43,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <html dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale} className={cn("antialiased", locale === 'ar' ? 'font-cairo' : 'font-sans', dmSans.variable, oswald.variable, bebasNeue.variable, cairo.variable)}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider>
+          <Navbar />
           {children}
         </NextIntlClientProvider>
       </body>

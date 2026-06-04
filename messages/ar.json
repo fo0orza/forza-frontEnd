@@ -57,5 +57,13 @@
       "active": "نشطون",
       "retention": "معدل الاحتفاظ"
     }
+  },
+  "Navbar": {
+    "links": {
+      "features": "المميزات",
+      "pricing": "الأسعار",
+      "coaches": "المدربون",
+      "login": "تسجيل الدخول"
+    }
   }
 }

@@ -27,3 +27,5 @@ export const MINI_STATS: MiniStat[] = [
     { icon: Users, value: 24, labelKey: "active" },
     { icon: Flame, value: 96, labelKey: "retention", isPercent: true },
 ]
+
+export const NAV_LINKS = ["features", "pricing", "coaches" , "login"] as const

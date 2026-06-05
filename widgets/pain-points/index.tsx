@@ -8,7 +8,7 @@ import Subtitle from "@/widgets/pain-points/subtitle";
 const PainPoints = async () => {
     const t = await getTranslations("PainPoints");
     return (
-        <section className="relative w-full" id="pain-points" aria-labelledby="pain-points-heading">
+        <section className="relative w-full overflow-hidden" id="pain-points" aria-labelledby="pain-points-heading">
             <GridPattern />
             <div
                 aria-hidden

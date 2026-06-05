@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import LanguageSwitcher from "@/features/language/language-switcher";
 import { NAV_LINKS } from "@/constants";
+import LanguageSwitcher from "@/features/language/language-switcher";
 import { Link } from "@/i18n/navigation"
 
 const NavLinks = async () => {

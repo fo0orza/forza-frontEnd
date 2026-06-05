@@ -2,7 +2,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useMemo } from "react";
-import { getAllLanguagesInLocale, getCurrentLanguageData } from "@/helpers";
+import { getAllLanguagesInLocale, getCurrentLanguageData, formatNumber as formatNumberUtil } from "@/helpers";
 import { usePathname } from "@/i18n/navigation";
 
 const useLocalization = () => {
@@ -14,15 +14,8 @@ const useLocalization = () => {
     const router = useRouter()
     const pathname = usePathname()
 
-    const formatNumber = (num: number, options?: Intl.NumberFormatOptions): string => {
-        if (isRtl) {
-            return new Intl.NumberFormat("ar-EG", { useGrouping: false, ...options }).format(num)
-        }
-        if (options) {
-            return new Intl.NumberFormat("en-US", { useGrouping: false, ...options }).format(num)
-        }
-        return num.toString()
-    }
+    const formatNumber = (num: number, options?: Intl.NumberFormatOptions): string =>
+        formatNumberUtil(locale, num, options)
     const currentTime = new Intl.DateTimeFormat(
         locale === "ar" ? "ar-EG" : "en-US",
         {

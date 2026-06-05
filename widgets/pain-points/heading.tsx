@@ -1,12 +1,8 @@
-import { getLocale, getTranslations } from "next-intl/server";
-import { cn } from "@/lib/utils";
-
+import { getTranslations } from "next-intl/server";
 const Heading = async () => {
-    const locale = await getLocale();
-
     const t = await getTranslations("PainPoints.heading");
     return (
-        <h2 id="pain-points-heading" className={cn("text-primary leading-[1.15] tracking-tight font-bold uppercase text-[clamp(2.5rem,6vw,4.75rem)] text-center" , locale === "ar" ? "font-cairo" : "font-oswald")}>
+        <h2 id="pain-points-heading" className="text-primary leading-[1.15] tracking-tight font-bold uppercase text-[clamp(2.5rem,6vw,4.75rem)] text-center rtl:font-cairo ltr:font-oswald">
             {t("line1")}
             <br />
             {t("line2")}{" "}

@@ -11,8 +11,6 @@ const dmSans = DM_Sans({
   variable: "--font-sans",
   fallback: ["Inter", "system-ui", "sans-serif"],
 })
-
-
 const oswald = Oswald({
   subsets: ["latin"],
   weight: "400",
@@ -28,10 +26,6 @@ const cairo = Cairo({
   subsets: ["arabic", "latin"],
   variable: "--font-cairo",
 })
-
-
-
-
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }>; }) {
   const { locale } = await params;

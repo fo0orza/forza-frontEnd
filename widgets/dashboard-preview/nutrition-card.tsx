@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 import { Apple } from "lucide-react"
-import { MACROS } from "@/constants"
 import { useTranslations } from "next-intl"
+import { MACROS } from "@/constants"
 import useLocalization from "@/hooks/use-localization"
 
 const NutritionCard = () => {

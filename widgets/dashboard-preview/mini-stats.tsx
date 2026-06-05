@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import { MINI_STATS } from "@/constants"
 import { useTranslations } from "next-intl"
+import { MINI_STATS } from "@/constants"
 import useLocalization from "@/hooks/use-localization"
 
 const MiniStats = () => {

@@ -60,6 +60,8 @@
   },
   "Navbar": {
     "ariaLabel": "Main navigation",
+    "cta": "Start Free Trial",
+    "noCreditCard": "No credit card required",
     "links": {
       "features": "Features",
       "pricing": "Pricing",

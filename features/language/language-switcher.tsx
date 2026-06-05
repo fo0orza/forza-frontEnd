@@ -1,6 +1,6 @@
 "use client"
-import CurrentLanguage from "@/components/shared/language/current-language";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import CurrentLanguage from "@/features/language/current-language";
 import useLocalization from "@/hooks/use-localization";
 
 const LanguageSwitcher = () => {

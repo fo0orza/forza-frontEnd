@@ -59,11 +59,30 @@
     }
   },
   "Navbar": {
+    "ariaLabel": "Main navigation",
     "links": {
       "features": "Features",
       "pricing": "Pricing",
       "coaches": "Coaches",
       "login": "Login"
+    }
+  },
+  "PainPoints": {
+    "badge": "Sound Familiar?",
+    "heading": {
+      "line1": "You're Working Hard.",
+      "line2": "But Working",
+      "wrong": "Wrong."
+    },
+    "subtitle": "Whether you're a coach managing clients or someone chasing personal goals — these problems are holding you back.",
+    "cards": {
+      "01": { "tag": "For Coaches", "title": "Sending Plans on WhatsApp", "sub": "Plans get buried. Clients ghost. You chase." },
+      "02": { "tag": "For You", "title": "No Idea What You're Actually Eating", "sub": "Guesswork meals. Zero clarity. No progress." },
+      "03": { "tag": "For Coaches", "title": "Managing Clients on Excel", "sub": "Tabs everywhere. Nothing scales." },
+      "04": { "tag": "For You", "title": "Starting Over Every Few Weeks", "sub": "Hype Monday. Quit Thursday. Repeat." },
+      "05": { "tag": "For Coaches", "title": "Calculating Macros Manually", "sub": "Hours of math. Hidden mistakes." },
+      "06": { "tag": "For You", "title": "Tracking Reps in Your Notes App", "sub": "Scattered. No history. No progression." },
+      "07": { "tag": "For Coaches", "title": "No Way to Know If Clients Follow Their Plans", "sub": "You guess. They drift. Results disappear." }
     }
   }
 }

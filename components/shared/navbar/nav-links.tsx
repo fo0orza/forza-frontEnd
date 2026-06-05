@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server"
-import LanguageSwitcher from "@/components/shared/language/language-switcher";
+import LanguageSwitcher from "@/features/language/language-switcher";
 import { NAV_LINKS } from "@/constants";
 import { Link } from "@/i18n/navigation"
 
@@ -8,18 +8,21 @@ const NavLinks = async () => {
 
 
     const RENDER_LINKS = NAV_LINKS.map((key) => (
-        <Link
-            key={key}
-            href={`#${key}`}
-            className="text-sm text-muted-foreground hover:text-primary transition-colors capitalize"
-        >
-            {t(key)}
-        </Link>
+        <li key={key}>
+            <Link
+                href={`#${key}`}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors capitalize"
+            >
+                {t(key)}
+            </Link>
+        </li>
     ))
 
     return (
         <div className="hidden md:flex items-center gap-6">
-            {RENDER_LINKS}
+            <ul className="flex items-center gap-6 list-none m-0 p-0">
+                {RENDER_LINKS}
+            </ul>
             <LanguageSwitcher />
         </div>
     )

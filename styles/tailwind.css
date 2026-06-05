@@ -43,19 +43,7 @@
   }
 }
 
-@layer base {
-  @keyframes glowPulse {
 
-    0%,
-    100% {
-      box-shadow: inset 0 4px 25px var(--secondary), inset 0 6px 65px var(--secondary), inset 0 10px 100px rgba(0, 230, 118, 0.6), 0 -4px 15px 2px var(--secondary), 0 -2px 55px 10px rgba(0, 230, 118, 0.8);
-    }
-
-    50% {
-      box-shadow: inset 0 4px 25px rgba(0, 230, 118, 0.7), inset 0 6px 65px rgba(0, 230, 118, 0.7), inset 0 10px 100px rgba(0, 230, 118, 0.42), 0 -4px 15px 2px rgba(0, 230, 118, 0.7), 0 -2px 55px 10px rgba(0, 230, 118, 0.56);
-    }
-  }
-}
 
 /*
   ---break---
@@ -97,6 +85,9 @@
   --color-card: var(--card);
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-coral: oklch(0.65 0.24 25);
+  --color-card-dark: oklch(0.16 0 0);
+  --color-border-dark: oklch(0.22 0 0);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);

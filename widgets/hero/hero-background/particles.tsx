@@ -1,5 +1,9 @@
+"use client"
+
+import { useEffect, useRef } from "react"
+
 // [top%, left%, widthPx, delayS, durationS]
-const PARTICLES: [number, number, number, number, number][] = [
+const PARTICLES_DATA: [number, number, number, number, number][] = [
     [5,  12, 3, 0.0, 2.2],
     [8,  27, 1, 0.4, 2.5],
     [12, 55, 3, 0.6, 1.9],
@@ -42,24 +46,118 @@ const PARTICLES: [number, number, number, number, number][] = [
     [62, 43, 3, 1.3, 1.9],
 ]
 
+interface Particle {
+    topPct: number    // % — vertical origin
+    leftPct: number   // % — horizontal origin
+    size: number      // radius
+    delay: number     // seconds
+    duration: number  // seconds
+}
+
+const SECONDARY = "#00E676"
+
 const Particles = () => {
+    const canvasRef = useRef<HTMLCanvasElement>(null)
+    const rafRef    = useRef<number>(0)
+
+    useEffect(() => {
+        const canvas = canvasRef.current
+        if (!canvas) return
+        const ctx = canvas.getContext("2d")
+        if (!ctx) return
+
+        // ── resize ──────────────────────────────────────────────
+        const resize = () => {
+            canvas.width  = canvas.offsetWidth
+            canvas.height = canvas.offsetHeight
+        }
+        resize()
+        const ro = new ResizeObserver(resize)
+        ro.observe(canvas)
+
+        // ── build particle list ──────────────────────────────────
+        const particles: Particle[] = PARTICLES_DATA.map(([top, left, size, delay, duration]) => ({
+            topPct:   top,
+            leftPct:  left,
+            size:     size / 2,   // radius
+            delay,
+            duration,
+        }))
+
+        // ── animation loop ───────────────────────────────────────
+        const start = performance.now()
+
+        const draw = (now: number) => {
+            // Rebuild originX/Y if canvas was resized
+            // (canvas.width/height are always current after resize)
+            const elapsed = (now - start) / 1000   // seconds
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            for (const p of particles) {
+                // Normalised position inside one loop cycle (0 → 1)
+                const cycleTime = p.duration
+                const t = ((elapsed - p.delay) % cycleTime + cycleTime) % cycleTime / cycleTime
+
+                // Replicate keyframe curve:
+                // 0 → 0.2 : fade in  (opacity 0 → 0.9)
+                // 0.2→ 0.6: hold     (opacity 0.9 → 0.7),  Y: 0 → -14px, scale: 0.6 → 1
+                // 0.6→ 1.0: fade out (opacity 0.7 → 0),    Y: -14 → -28px, scale: 1 → 0.5
+
+                let opacity: number
+                let yOffset: number
+                let scale:   number
+
+                if (t < 0.2) {
+                    const f = t / 0.2
+                    opacity = f * 0.9
+                    yOffset = 0
+                    scale   = 0.6
+                } else if (t < 0.6) {
+                    const f = (t - 0.2) / 0.4
+                    opacity = 0.9 - f * 0.2          // 0.9 → 0.7
+                    yOffset = -14 * f                 // 0 → -14px
+                    scale   = 0.6 + 0.4 * f           // 0.6 → 1
+                } else {
+                    const f = (t - 0.6) / 0.4
+                    opacity = 0.7 * (1 - f)           // 0.7 → 0
+                    yOffset = -14 - 14 * f            // -14 → -28px
+                    scale   = 1 - 0.5 * f             // 1 → 0.5
+                }
+
+                if (opacity <= 0) continue
+
+                // Recalculate origin on every frame in case canvas resized
+                const ox = (p.leftPct / 100) * canvas.width
+                const oy = (p.topPct  / 100) * canvas.height
+
+                ctx.save()
+                ctx.globalAlpha = opacity
+                ctx.beginPath()
+                ctx.arc(ox, oy + yOffset, p.size * scale, 0, Math.PI * 2)
+                ctx.fillStyle = SECONDARY
+                ctx.fill()
+                ctx.restore()
+            }
+
+            rafRef.current = requestAnimationFrame(draw)
+        }
+
+        rafRef.current = requestAnimationFrame(draw)
+
+        return () => {
+            cancelAnimationFrame(rafRef.current)
+            ro.disconnect()
+        }
+    }, [])
+
     return (
-        <div className="absolute inset-0 z-3 pointer-events-none max-w-content w-full mx-auto">
-            {PARTICLES.map(([top, left, size, delay, duration], i) => (
-                <div
-                    key={i}
-                    className="absolute rounded-full bg-secondary"
-                    style={{
-                        top: `${top}%`,
-                        left: `${left}%`,
-                        width: `${size}px`,
-                        height: `${size}px`,
-                        opacity: 0,
-                        animation: `particle-drift ${duration}s ease-in-out ${delay}s infinite`,
-                    }}
-                />
-            ))}
-        </div>
+        <canvas
+            ref={canvasRef}
+            aria-hidden="true"
+            className="absolute inset-0 z-3 pointer-events-none w-full h-full"
+            style={{ willChange: "transform" }} 
+        />
     )
 }
 

@@ -101,42 +101,8 @@
   --breakpoint-3xl: 1920px;
 }
 
-@keyframes particle-drift {
-  0% {
-    opacity: 0;
-    transform: translateY(0px) scale(0.6);
-  }
 
-  20% {
-    opacity: 0.9;
-  }
 
-  60% {
-    opacity: 0.7;
-    transform: translateY(-14px) scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-28px) scale(0.5);
-  }
-}
-
-@keyframes float-light {
-
-  0%,
-  100% {
-    transform: translate(-50%, -50%) translate(0px, 0px);
-  }
-
-  33% {
-    transform: translate(-50%, -50%) translate(40px, -35px);
-  }
-
-  66% {
-    transform: translate(-50%, -50%) translate(-30px, -20px);
-  }
-}
 
 /*
   ---break---

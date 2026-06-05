@@ -1,6 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { cn } from "@/lib/utils";
-
 const Heading = async () => {
     const t = await getTranslations("PainPoints.heading");
     return (

@@ -2,11 +2,10 @@
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { X } from "lucide-react"
 import { Drawer as DrawerPrimitive } from "vaul"
-import DrawerFooter from "@/components/navbar/drawer/DrawerFooter"
-import DrawerNavLinks from "@/components/navbar/drawer/DrawerNavLinks"
-import NavbarLogo from "@/components/navbar/NavbarLogo"
+import NavbarLogo from "@/components/shared/logo/index"
+import DrawerFooter from "@/components/shared/navbar/drawer/DrawerFooter"
+import DrawerNavLinks from "@/components/shared/navbar/drawer/DrawerNavLinks"
 import { useNavbarStore } from "@/store/navbar"
-
 const NavbarDrawer = () => {
     const { isDrawerOpen, closeDrawer } = useNavbarStore()
 

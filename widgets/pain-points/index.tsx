@@ -15,7 +15,7 @@ const PainPoints = async () => {
                 className="pointer-events-none absolute left-1/2 top-1/2 h-200 w-200 -translate-x-1/2 -translate-y-1/2 rounded-full"
                 style={{ background: "radial-gradient(circle, oklch(0.65 0.24 25 / 0.06), transparent 70%)" }}
             />
-            <div className="relative z-3 py-40">
+            <div className="relative z-3 py-40 px-6">
                 <div className="w-full flex flex-col items-center gap-8">
                     <Badge text={t("badge")} />
                     <Heading />

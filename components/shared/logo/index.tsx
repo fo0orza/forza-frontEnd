@@ -1,6 +1,6 @@
 import Image from "next/image"
-import { Link } from "@/i18n/navigation"
 import logo from "@/assets/imgs/Froza-logo.svg"
+import { Link } from "@/i18n/navigation"
 const Logo = () => {
     return (
         <Link href="/" className="flex items-center gap-3 rtl:flex-row-reverse">

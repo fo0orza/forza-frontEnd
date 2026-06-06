@@ -20,7 +20,7 @@ const PainBentoGrid = async () => {
     ))
 
     return (
-        <div className="mt-24 max-w-content mx-auto">
+        <div className="max-w-content mx-auto">
             <ul className="grid grid-cols-6 gap-4 list-none p-0 m-0" role="list">
                 {RENDER_CARDS}
             </ul>

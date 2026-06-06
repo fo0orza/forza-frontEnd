@@ -13,7 +13,7 @@ interface IProps {
 const BentoCard = ({ card, className }: IProps) => {
     return (
         <li className={cn(className)}>
-            <article className="relative h-full px-8 py-8 overflow-hidden bg-card-dark/50 backdrop-blur-sm border border-muted-foreground/20 hover:border-coral/50 transition-all duration-350 ease-in-out rounded-[20px] hover:-translate-y-1.5">
+            <article aria-label={card.title} className="relative h-full px-8 py-8 overflow-hidden bg-card-dark/50 backdrop-blur-sm border border-muted-foreground/20 hover:border-coral/50 transition-all duration-350 ease-in-out rounded-[20px] hover:-translate-y-1.5">
                 <GhostNumber ghost={card.ghost} />
                 <div className="relative z-3">
                     <div className="flex items-center justify-between">

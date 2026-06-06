@@ -74,7 +74,7 @@
     "heading": {
       "line1": "You're Working Hard.",
       "line2": "But Working",
-      "wrong": "Wrong."
+      "wrong": "Wrong"
     },
     "subtitle": "Whether you're a coach managing clients or someone chasing personal goals — these problems are holding you back.",
     "cards": {
@@ -85,6 +85,25 @@
       "05": { "tag": "For Coaches", "title": "Calculating Macros Manually", "sub": "Hours of math. Hidden mistakes." },
       "06": { "tag": "For You", "title": "Tracking Reps in Your Notes App", "sub": "Scattered. No history. No progression." },
       "07": { "tag": "For Coaches", "title": "No Way to Know If Clients Follow Their Plans", "sub": "You guess. They drift. Results disappear." }
+    }
+  },
+  "Solutions": {
+    "heading": {
+      "badge": "There's a better way",
+      "line1": "Meet",
+      "brand": "Forza"
+    },
+    "01": {
+      "title": "Manage All Your Clients",
+      "description": "One dashboard for every client — plans, progress, check-ins, and messages. No more WhatsApp chaos."
+    },
+    "02": {
+      "title": "Nutrition & Workouts",
+      "description": "Generate custom meal and workout plans in seconds. Calories, macros, and sets — all calculated automatically."
+    },
+    "03": {
+      "title": "Real Progress. Real Results.",
+      "description": "Track weight, measurements, and performance over time. See the data. Stay motivated. Never guess again."
     }
   }
 }

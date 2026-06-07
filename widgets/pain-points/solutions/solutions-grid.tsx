@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server"
 import { SOLUTIONS } from "@/constants/solutions"
-import Card from "@/widgets/pain-points/solutions/card"
+import SolutionCard from "@/widgets/pain-points/solutions/solution-card"
 
 const SolutionsGrid = async () => {
     const t = await getTranslations("Solutions")
@@ -15,7 +15,7 @@ const SolutionsGrid = async () => {
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 list-none p-0 m-0" role="list">
             {cards.map((card) => (
                 <li key={card.translationKey}>
-                    <Card {...card} />
+                    <SolutionCard {...card} />
                 </li>
             ))}
         </ul>

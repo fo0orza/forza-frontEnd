@@ -2,6 +2,7 @@ import "styles/tailwind.css"
 import { Bebas_Neue, Cairo, DM_Sans, Oswald } from "next/font/google"
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils"
@@ -39,6 +40,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         <NextIntlClientProvider>
           <Navbar />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

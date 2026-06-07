@@ -182,5 +182,68 @@
       "title": "تقدم حقيقي. نتائج حقيقية.",
       "description": "تابع الوزن والقياسات والأداء مع الوقت. شاهد البيانات. ابقَ متحفزاً. لا مزيد من التخمين."
     }
+  },
+  "Footer": {
+    "brand": {
+      "status": "تحت الصيانة والتحسين المستمر",
+      "description": "المنصة المصممة للمدربين الجادين والأشخاص الطموحين."
+    },
+    "newsletter": {
+      "label": "احصل على نصائح التدريب وآخر التحديثات",
+      "placeholder": "your@email.com",
+      "submitAria": "اشترك في النشرة البريدية"
+    },
+    "columns": {
+      "product": {
+        "title": "المنتج",
+        "links": {
+          "features": "المميزات",
+          "pricing": "الأسعار",
+          "howItWorks": "كيف تعمل",
+          "forCoaches": "للمدربين",
+          "forIndividuals": "للأفراد",
+          "changelog": "سجل التحديثات"
+        }
+      },
+      "company": {
+        "title": "الشركة",
+        "links": {
+          "about": "من نحن",
+          "blog": "المدونة",
+          "careers": "الوظائف",
+          "press": "الملف الإعلامي",
+          "contact": "تواصل معنا",
+          "affiliates": "الشركاء"
+        }
+      },
+      "support": {
+        "title": "الدعم",
+        "links": {
+          "help": "مركز المساعدة",
+          "documentation": "التوثيق",
+          "status": "صفحة الحالة",
+          "privacy": "سياسة الخصوصية",
+          "terms": "شروط الخدمة",
+          "cookies": "سياسة الكوكيز"
+        }
+      }
+    },
+    "social": {
+      "twitter": "تويتر",
+      "instagram": "إنستغرام",
+      "linkedin": "لينكدإن",
+      "youtube": "يوتيوب",
+      "followAria": "تابع فورزا على {network}"
+    },
+    "bottom": {
+      "copyright": "© {year} فورزا. جميع الحقوق محفوظة.",
+      "badges": {
+        "ssl": "محمي بـ SSL",
+        "uptime": "وقت تشغيل 99.9%",
+        "gdpr": "متوافق مع GDPR"
+      },
+      "language": "العربية",
+      "languageAria": "تغيير اللغة"
+    }
   }
 }

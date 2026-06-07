@@ -182,5 +182,68 @@
       "title": "Real Progress. Real Results.",
       "description": "Track weight, measurements, and performance over time. See the data. Stay motivated. Never guess again."
     }
+  },
+  "Footer": {
+    "brand": {
+      "status": "Actively maintained & improving",
+      "description": "The platform built for serious coaches and driven individuals."
+    },
+    "newsletter": {
+      "label": "Get coaching tips & product updates",
+      "placeholder": "your@email.com",
+      "submitAria": "Subscribe to newsletter"
+    },
+    "columns": {
+      "product": {
+        "title": "Product",
+        "links": {
+          "features": "Features",
+          "pricing": "Pricing",
+          "howItWorks": "How It Works",
+          "forCoaches": "For Coaches",
+          "forIndividuals": "For Individuals",
+          "changelog": "Changelog"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About Us",
+          "blog": "Blog",
+          "careers": "Careers",
+          "press": "Press Kit",
+          "contact": "Contact Us",
+          "affiliates": "Affiliates"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "links": {
+          "help": "Help Center",
+          "documentation": "Documentation",
+          "status": "Status Page",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Service",
+          "cookies": "Cookie Policy"
+        }
+      }
+    },
+    "social": {
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn",
+      "youtube": "YouTube",
+      "followAria": "Follow Forza on {network}"
+    },
+    "bottom": {
+      "copyright": "© {year} Forza. All rights reserved.",
+      "badges": {
+        "ssl": "SSL Secured",
+        "uptime": "99.9% Uptime",
+        "gdpr": "GDPR Compliant"
+      },
+      "language": "English",
+      "languageAria": "Change language"
+    }
   }
 }

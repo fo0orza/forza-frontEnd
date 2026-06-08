@@ -7,7 +7,7 @@ import { FOOTER_COLUMNS } from "@/constants/footer"
 
 const Footer = () => {
     return (
-        <footer className="relative w-full overflow-hidden border-t border-white/[0.06] bg-background mt-50">
+        <footer className="relative w-full overflow-hidden border-t border-white/[0.06] bg-background ">
             <div className="opacity-30">
                 <GridPattern />
             </div>

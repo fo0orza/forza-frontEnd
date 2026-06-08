@@ -183,6 +183,21 @@
       "description": "Track weight, measurements, and performance over time. See the data. Stay motivated. Never guess again."
     }
   },
+  "CtaBanner": {
+    "heading": {
+      "line1": "Start Free.",
+      "line2": "Grow Fast."
+    },
+    "subtitle": "Join 500+ coaches already running their business on Forza.",
+    "cta": {
+      "primary": "Start Free Trial",
+      "secondary": "Book a Demo"
+    },
+    "socialProof": {
+      "rating": "4.9/5",
+      "ratingSource": "from 200+ coaches"
+    }
+  },
   "Footer": {
     "brand": {
       "status": "Actively maintained & improving",

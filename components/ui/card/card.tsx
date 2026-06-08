@@ -3,8 +3,8 @@ interface IProps {
 }
 const Card = ({ children }: IProps) => {
     return (
-        <article className="relative rounded-2xl border border-secondary/20 bg-background/20 p-6 backdrop-blur-xl hover:-translate-y-1 hover:border-secondary/40 transition-transform duration-300 overflow-hidden">
-            <div className="relative z-2">
+        <article className="relative h-full rounded-2xl border border-secondary/20 bg-background/20 p-6 backdrop-blur-xl hover:-translate-y-1 hover:border-secondary/40 transition-transform duration-300 overflow-hidden">
+            <div className="relative z-2 flex flex-col h-full">
                 {children}
             </div>
             <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-secondary/80 to-transparent" />

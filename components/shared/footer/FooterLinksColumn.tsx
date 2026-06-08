@@ -16,7 +16,7 @@ const FooterLinksColumn = async ({ column }: { column: IFooterColumn }) => {
                         <Link
                             href={link.href}
                             {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                            className="group inline-flex items-center gap-2 text-[14px] text-[#a0a0a0] transition-colors duration-200 hover:text-white"
+                            className="group inline-flex items-center gap-2 text-[14px] text-muted-foreground transition-colors duration-200 hover:text-white"
                         >
                             <span
                                 aria-hidden="true"

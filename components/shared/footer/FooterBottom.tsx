@@ -7,7 +7,7 @@ const FooterBottom = async () => {
 
   return (
     <div className="flex flex-col items-center gap-6 border-t border-muted-foreground/20 pt-8 md:flex-row md:justify-between md:gap-4">
-      <p className="order-3 text-[13px] text-[#777777] md:order-1">
+      <p className="order-3 text-[13px] text-muted-foreground md:order-1">
         {t("copyright", { year: new Date().getFullYear() })}
       </p>
 
@@ -16,7 +16,7 @@ const FooterBottom = async () => {
           const Icon = badge.icon
           return (
             <li key={badge.translationKey} className="flex items-center gap-4">
-              <span className="flex items-center gap-1.5 text-[12px] text-[#888888]">
+              <span className="flex items-center gap-1.5 text-[12px] text-muted-foreground">
                 <Icon className="h-3.5 w-3.5" />
                 {t(`badges.${badge.translationKey}`)}
               </span>
@@ -27,7 +27,6 @@ const FooterBottom = async () => {
           )
         })}
       </ul>
-
      <div className="order-2 md:order:3">
          <LanguageSwitcher />
      </div>

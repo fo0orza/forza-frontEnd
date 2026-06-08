@@ -19,7 +19,7 @@ const FooterNewsletter = () => {
             className="flex flex-col gap-3 md:max-w-[332px]"
             aria-label={t("submitAria")}
         >
-            <label htmlFor="footer-newsletter-email" className="text-[13px] text-[#888888]">
+            <label htmlFor="footer-newsletter-email" className="text-[13px] text-muted-foreground">
                 {t("label")}
             </label>
 

@@ -14,7 +14,7 @@ const NavbarLinks = () => {
                 <li key={key}>
                     <Link
                         href={`#${key}`}
-                        className="text-[15px] text-[#888888] hover:text-white transition-colors duration-200 capitalize"
+                        className="text-[15px] text-muted-foreground hover:text-white transition-colors duration-200 capitalize"
                     >
                         {t(key)}
                     </Link>

@@ -17,7 +17,7 @@ const FooterSocials = async () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={t("followAria", { network })}
-                            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-[#888888] transition-all duration-200 hover:border-secondary/50 hover:bg-secondary/10 hover:text-secondary hover:shadow-[0_0_18px_-4px_var(--secondary)]"
+                            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-muted-foreground transition-all duration-200 hover:border-secondary/50 hover:bg-secondary/10 hover:text-secondary hover:shadow-[0_0_18px_-4px_var(--secondary)]"
                         >
                             <HugeiconsIcon icon={social.icon} size={16} strokeWidth={1.75} />
                         </Link>

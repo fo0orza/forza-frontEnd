@@ -17,7 +17,7 @@ const FeatureCard = ({ icon, title, description, badge }: FeatureCardProps) => {
         <Card>
             <CardIcon Icon={icon} />
             <CardTitle className="mt-5" title={title} />
-            <CardDescription className="mt-2" description={description} />
+            <CardDescription className="mt-2 flex-1" description={description} />
             <Badge className="mt-5" variant="secondary" text={badge} glowCircle={false} />
         </Card>
     )

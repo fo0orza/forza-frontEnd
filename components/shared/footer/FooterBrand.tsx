@@ -8,14 +8,13 @@ const FooterBrand = async () => {
 
     return (
         <div className="flex flex-col gap-6">
-            <Logo />
-
+            <div className="flex justify-start">
+                <Logo />
+            </div>
             <Badge variant="secondary" text={t("status")} />
-
-            <p className="max-w-sm text-[14px] leading-relaxed text-[#888888]">
+            <p className="max-w-sm text-[14px] leading-relaxed text-muted-foreground">
                 {t("description")}
             </p>
-
             <FooterSocials />
         </div>
     )

@@ -183,6 +183,60 @@
       "description": "Track weight, measurements, and performance over time. See the data. Stay motivated. Never guess again."
     }
   },
+  "Faq": {
+    "badge": "FAQ",
+    "heading": {
+      "line1": "Got Questions?",
+      "line2": "We Got",
+      "highlight": "Answers."
+    },
+    "subtitle": "Everything you need to know before you start.",
+    "tabs": {
+      "forCoaches": "For Coaches",
+      "forYou": "For You"
+    },
+    "forCoaches": {
+      "01": {
+        "q": "How does my client access their plan?",
+        "a": "Once you build and send a plan, your client gets a personal portal link. They can view their full nutrition plan day by day, follow their workout program, and submit weekly check-ins — all from any browser. No app download, no extra accounts."
+      },
+      "02": {
+        "q": "Is there a limit on how many clients I can manage?",
+        "a": "Depends on your plan. Starter handles up to 15 clients, Pro goes up to 50, and Elite is completely unlimited. You can upgrade anytime as your roster grows — all your data stays intact."
+      },
+      "03": {
+        "q": "Can I export plans as PDFs with my own branding?",
+        "a": "Yes. Every plan exports as a clean, professionally formatted PDF. On Pro, your name appears on every export. On Elite, full white-label — your clients only ever see your brand. Forza stays invisible."
+      },
+      "04": {
+        "q": "How does the AI plan generator work for my clients?",
+        "a": "You hit generate, and our AI — powered by Gemini — builds a full nutrition or workout plan based on your client's goals, calories, macros, allergies, and fitness level. Takes seconds. You review, tweak, and send. You're always the one in control."
+      }
+    },
+    "forYou": {
+      "01": {
+        "q": "Do I need a coach to use Forza?",
+        "a": "Not at all. Forza works completely solo. Set your own goals, calculate your TDEE and macros, build your meal plan, create your workout program, and track your progress photos and measurements — all on your own, at your own pace."
+      },
+      "02": {
+        "q": "Can I track my own calories and workouts?",
+        "a": "That's exactly what Forza is built for. Log your meals, hit your macro targets, track every set and rep, and watch your progress charts update week by week. No guesswork. No scattered notes app. Just clarity."
+      },
+      "03": {
+        "q": "How accurate is the calorie and macro calculation?",
+        "a": "We use the Mifflin-St Jeor equation — the most validated formula for BMR and TDEE. Your targets are then adjusted based on your activity level and goal: cut, bulk, or maintain. Same method used by professional nutritionists."
+      },
+      "04": {
+        "q": "Is my data safe? Can I cancel anytime?",
+        "a": "Your data is encrypted and fully yours. You can export everything before you leave. Cancel anytime — no contracts, no penalties, no questions asked. We'd rather earn your loyalty than trap you."
+      }
+    },
+    "support": {
+      "title": "Still have questions?",
+      "cta": "Chat with us",
+      "note": "We usually reply within a few hours."
+    }
+  },
   "CtaBanner": {
     "heading": {
       "line1": "Start Free.",
